@@ -1,0 +1,24 @@
+#deletar
+import os
+
+# visualizar
+
+caminho = "local"
+lista_arquivos = os.listdir(caminho)
+
+for arquivo in lista_arquivos:
+    nome_completo = f'{caminho}/{arquivo}'
+    tamanho = os.path.getsize(nome_completo) / 1000000 # mb
+    if tamanho > 1000:
+        print(arquivo, tamanho)
+
+
+
+caminho = "local"
+lista_arquivos = os.listdir(caminho)
+
+for arquivo in lista_arquivos:
+    nome_completo = f'{caminho}/{arquivo}'
+    tamanho = os.path.getsize(nome_completo) / 1000000 # mb
+    if tamanho > 1000:
+        os.remove(nome_completo)
